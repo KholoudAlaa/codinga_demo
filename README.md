@@ -1,8 +1,6 @@
 # Foundation Components - React Component
 
 ## Install
-
-    $ git clone https://starwalletlabs.visualstudio.com/Foundation%20Components/_git/ReactComponet
     $ cd ReactComponent
     $ npm install
 
