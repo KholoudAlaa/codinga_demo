@@ -1,0 +1,148 @@
+/*Primary (Fill)*/
+
+.Primary_fill {
+    @include btn($primary_color, $white, $primary_color);
+    box-shadow: 0 6px 20px 0 rgba(0, 1, 4, 0.41);
+}
+
+.Primary_fill:hover {
+    @include btn($primary_color, $white, $primary_color);
+}
+
+
+
+.Primary_fill:active {
+    @include btn($dark_blue, $white, $dark_blue);
+}
+
+.Primary_fill:disabled {
+    @include btn($primary_color, $white, $primary_color); 
+    @extend .isdisabled; 
+}
+
+
+
+
+/*Primary (Outline)*/
+.Primary_outline {
+    @include btn(transparent, $primary_color, $primary_color);
+}
+
+.Primary_outline:hover {
+   @include btn($dark_blue, $white, $primary_color);
+}
+
+.Primary_outline:active {
+    @include btn($dark_blue, $white, $primary_color);
+}
+
+.Primary_outline:disabled {
+    @include btn($white, $primary_color, $primary_color);
+    @extend .isdisabled; 
+}
+
+/*white (Fill)*/
+.white_fill {
+    @include btn($white, $secondary_color, $white);
+}
+
+.white_fill:hover {
+    @include btn($dark_red, $white, $dark_red);
+}
+
+.white_fill:active {
+    @include btn($dark_red, $white, $dark_red);
+}
+
+.white_fill:disabled {
+    @include btn($dark_red, $white, $dark_red);
+    @extend .isdisabled; 
+}
+
+
+/*Secondary (Fill)*/
+.secondary_fill {
+    @include btn($secondary_color, $white, $secondary_color);
+}
+
+.secondary_fill:hover {
+    @include btn($dark_red, $white, $dark_red);
+}
+
+.secondary_fill:active {
+    @include btn($dark_red, $white, $dark_red);
+}
+
+.secondary_fill:disabled {
+    @include btn($dark_red, $white, $dark_red);
+    @extend .isdisabled; 
+}
+
+/*secondary (Outline)*/
+.secondary_outline {
+    @include btn($white, $secondary_color, $secondary_color);
+}
+
+.secondary_outline:hover {
+   @include btn($dark_red, $white, $dark_red);
+}
+
+.secondary_outline:active {
+    @include btn($dark_red, $white, $dark_red);
+}
+
+.secondary_outline:disabled {
+    @include btn($dark_red, $white, $dark_red);
+    @extend .isdisabled;
+}
+
+// /*Grayscale Fill*/
+
+.grayscale_fill {
+    @include btn($Nero, $white, $Nero);
+}
+
+.grayscale_fill:hover {
+   @include btn($black, $white, $black);
+}
+
+.grayscale_fill:active {
+    @include btn($black, $white, $black);
+}
+
+.grayscale_fill:disabled {
+    @include btn($black, $white, $black);
+    @extend .isdisabled;
+}
+
+// /*Grayscale (Outline)*/
+
+.grayscale_outline {
+    @include btn($white, $Nero, $Nero);
+}
+
+.grayscale_outline:hover {
+    @include btn($black, $white, $black);
+}
+
+.grayscale_outline:active {
+    @include btn($black, $white, $black);
+}
+
+.grayscale_outline:disabled {
+    @include btn($white, $Nero, $Nero);
+    @extend .isdisabled;
+}
+
+.ciecle{
+    @extend  %flexCenter;
+    max-width: 23px;
+    max-height: 23px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50% !important;
+}
+
+.btn_lg{
+    min-width: 200px !important;
+}

@@ -1,0 +1,89 @@
+/************LINKS ********************/
+@mixin link ($color) {
+    color: $color;
+    display: inline-block;
+    transition: 0.3s;
+    font-size: 0.9375rem;
+    text-transform: capitalize;
+    &:hover{
+        text-decoration: underline;
+    }
+    &:active,
+    &:focus{
+        text-decoration: none;
+    }
+    &:disabled{
+        color: red !important;
+        @extend .isdisabled;
+    }
+}
+
+/************BTNS ********************/
+@mixin btn ($background, $color, $border) {
+    background-color: $background;
+    border: 1px solid $border;
+    color: $color;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 0 20px;
+    min-height: 37px !important;
+    font-size: 0.875rem;
+    border-radius: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+    text-transform: capitalize;
+    @include mq("tablet") {
+        padding: 0 12px;
+      }
+    &.small-btn{
+        min-height: 30px !important;
+        padding: 0 15px;
+    }
+}
+ 
+
+/************MEDIA QUERY ********************/
+$breakpoints: (
+    "phone":        401px,
+    "phone-wide":   481px,
+    "phablet":      577px,
+    "tablet-small": 641px,
+    "tablet":       769px,
+    "ipad":         993px,
+    "tablet-wide":  1025px,
+    "desktop":      1249px,
+    "desktop-wide": 1441px
+);
+
+@mixin mq($width, $type: max) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+
+        @if $type==max {
+            $width: $width - 1px;
+        }
+
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+/*****************prfix*************/
+@mixin prefixer ($property, $val) {
+    #{$property}: $val;
+    -webkit-#{$property}: $val;
+    -moz-#{$property}: $val;
+    -ms-#{$property}: $val;
+    -o-#{$property}: $val;
+}
+
+/*****************input placeholder*************/
+@mixin input-placeholder {
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+

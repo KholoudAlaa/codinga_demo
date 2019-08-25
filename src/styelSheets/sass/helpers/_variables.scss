@@ -1,0 +1,63 @@
+
+//************************** COLORS **************************//
+
+//primary color 
+$primary_color:#48447f; //done
+$dark_blue:#1F883C;
+$sky_color : #249D45;
+$light_blue:#80D698;
+
+// Secondary color
+$secondary_color:#eb6619;//done
+$dark_red:#c30c00;
+$light_red:#df5950;
+
+// Grayscale
+$Nero:#242424;
+$Matterhorn:#4b4b4b;
+$DimGray : #656565;
+$grey : #7e7e7e;
+$darkGray : #b1b1b1;
+$LightGrey : #CBCBCB;
+$HawkesBlue : #DADCE0;
+
+// other colors
+$black : #000; //done
+$white : #FFF; //done
+
+// out of palitte
+$Snow : #FAFAFA;
+$WhiteSmoke : #F5F5F5;
+$Endeavour : #249D45;
+$darkEndeavour : #1F883C;
+$notifybackground : rgba(57, 103, 169, 0.09);
+$userbackground : #f0f3f8;
+//************************** FONTS **************************//
+
+@font-face {
+    src: local('Cairo Regular'), local('Cairo-Regular'), url(../sass/fonts/Cairo-Regular.ttf);
+    font-family: Cairo;
+}
+
+@font-face {
+    src: local('Cairo Bold'), local('Cairo-Bold'), url(../sass/fonts/Cairo-Bold.ttf);
+    font-family: Cairo;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: lato;
+    src: url(../sass/fonts/29LT_Bukra.ttf);
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: lato;
+    src: url(../sass/fonts/29LT_Bukra_Bold.TTF); // font-weight : 400
+    font-weight: bold;
+    font-display: swap;
+}
+
+
+

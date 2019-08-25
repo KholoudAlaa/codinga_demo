@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
+    <defs>
+        <style>
+            .cls-1{fill:#e3e3e3}
+        </style>
+    </defs>
+    <g id="delete-icon" transform="translate(-.326)">
+        <g id="delete">
+            <path id="Path_7" d="M52.326 14c0 .97.03 2 1 2h7a2.2 2.2 0 0 0 2-2V4h-10zm11-13h-3l-1-1h-4l-1 1h-3v2h12z" class="cls-1" data-name="Path 7" transform="translate(-51)"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,13 @@
+.ant-layout-footer {
+    background-image: linear-gradient(to bottom, #312782 8%, #1f114c)!important;
+    color: $white;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 200px;
+    text-align: center;
+    body.rtl &{
+        left: 0;
+        right: 200px;
+    }
+}

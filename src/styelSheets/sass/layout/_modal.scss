@@ -1,0 +1,170 @@
+.admin-modal-wrapper{
+    .ant-modal{
+        width: 100% !important;
+        max-width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .ant-modal-content{
+        height: 100%;
+        width: 100%;
+        .ant-modal-close-x{
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            background-color: $dark_red;
+            color: #FFF;
+        }
+        .ant-modal-header{
+            height: 50px;
+            @extend  %flexBetween;
+            background-color: #f4f4f4;
+            border-radius: 0;
+            .ant-modal-title{
+                font-size: 1.125rem;
+                font-weight: bold;
+                color: #242424;
+            }
+        }
+        .ant-modal-body{
+            border-radius: 0;
+            height: calc(100% - 50px - 90px); // height of header and footer
+            overflow: auto;
+            padding: 0;
+        }
+        .ant-modal-footer{
+            height: 90px;
+            @extend  %flexCenter;
+            justify-content: flex-end; 
+            background-color: #ededed;
+            border-radius: 0;
+        }
+    }
+
+    .ant-form{
+        height: 100%;
+    }
+
+    .Personal-info-wrapper{
+        height: auto;
+        overflow: auto;
+        .ant-collapse{
+            background-color: transparent;
+            border: 0;
+            .ant-collapse-header{
+                border: 0;
+                box-shadow: none;
+                background: transparent;
+                font-size: 11px;
+                font-weight: bold;
+                color: $dark_blue;
+                .ant-collapse-item{
+                    border: 0;
+                }
+            }
+            .ant-collapse-item{
+                border: 0;
+            }
+            .ant-collapse-content{
+                border: 0px;
+            }
+            .ant-collapse-content-box{
+                padding: 0;
+            }
+        }
+    }
+
+    .rules-wrapper{
+        background-color: #f8f8f8;
+        height: 100%;
+        h6{
+            color: $dark_blue;
+            padding-bottom: 10px;
+        }
+        .ant-form-item{
+            .ant-form-item-label{
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+                label{
+                    pointer-events: none;
+                }
+            }
+        }
+        .ant-select-selection--multiple{
+            .ant-select-selection__rendered{
+                width: 100%;
+                height: 265px;
+                // pointer-events: none;
+                overflow-y: auto;
+                border-radius: 4px;
+                border: solid 2px #dadce0;
+                background-color: #ffffff;
+                margin: 0;
+                position: absolute;
+                left: 0;
+                top: 108px;
+                body.rtl &{
+                    overflow-x: hidden;
+                    left: auto;
+                    right: 0;
+                }
+                &::-webkit-scrollbar {
+                    width: 8px;
+                }
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    background: #f0f0f0;
+                }
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: #747474;
+                    border-radius: 5px;
+                }
+                ul{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    &>li{
+                        @extend %flexBetween;
+                        max-width: 100%;
+                        margin: 0;
+                        border-radius : 0;
+                        border: 0;
+                        height: 40px;
+                        background-color: transparent;
+                        color: #404040;
+                        font-size: 13px;
+                        &:nth-child(even){
+                            background-color: #f7f7f7;
+                        }
+                        &:last-of-type{
+                            background: transparent;
+                            height: 1px;
+                        }
+                        .ant-select-selection__choice__remove{
+                            font-size: 16px;
+                            body.rtl &{
+                                width: fit-content;
+                                left: 5px;
+                                right: auto;
+                            }
+                            // pointer-events: all;
+                        }
+                    }
+                }
+                .ant-select-selection__placeholder{
+                    width: 100%;
+                    top: 25px;
+                    text-align: center;
+                    margin: 0;
+                    // body.rtl &{
+                    //     left: auto;
+                    //     right : 50%;
+                    // }
+                }
+            }
+        }
+    }
+}

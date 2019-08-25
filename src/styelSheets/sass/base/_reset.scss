@@ -1,0 +1,354 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+/*******  created 26/3/2019 ************/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    font-family: lato, Cairo;
+}
+
+
+
+// button:focus {
+//     outline: 0 !important; 
+// }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body,
+html {
+    font-size: 14px;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    max-width: 100%;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+[hidden] {
+    display: none;
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+    outline: none;
+}
+
+input:focus {
+    outline: none !important;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+figure {
+    margin: 0;
+}
+
+form {
+    margin: 0;
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+    white-space: normal;
+    *margin-left: -7px;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+
+button,
+input {
+    line-height: normal;
+}
+
+button,
+select {
+    text-transform: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+div::-webkit-scrollbar,
+section::-webkit-scrollbarb,
+main::-webkit-scrollbar,
+.ant-layout::-webkit-scrollbar {
+    background-color: #f4f4f4 !important;
+    width: 7px !important;
+}
+
+//common
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+div::-webkit-scrollbar-thumb,
+section::-webkit-scrollbar-thumb,
+main::-webkit-scrollbar-thumb,
+.ant-layout::-webkit-scrollbar-thumb {
+    background-color: $primary_color !important;
+}
+
+.ant-form-item-with-help{
+    margin-bottom: 24px;
+}
+.font-weight-600{
+    font-weight: 600;
+}
+#root {
+    min-height: 100% !important;
+}
+.height_90{
+    min-height: 90vh !important;
+}
+.text_center{
+    text-align: center;
+}
+.no_background{
+    background: none !important;
+}
+.width_60{
+    width: 60% !important;
+}
+.ant-modal-content{
+    border-radius: 20px;
+}
+.ant-modal-body {
+    padding: 0px 20px;}
+
+.gutter-example .ant-row > div {
+background: transparent;
+border: 0;
+}
+.gutter-box {
+padding: 5px 0;
+}
+.ant-btn{
+    border: none;
+    box-shadow: none;
+}
+.m_0{
+    margin: 0 !important;
+}
+
+strong{
+    font-weight: bolder !important;
+}
+.ant-modal-header{
+    border-radius: 20px;
+    border: none;
+    padding-top: 40px;
+    .ant-modal-title{
+        text-align: center;
+        font-size: 2rem;
+        color: $black;
+        font-weight: bold;
+    }
+}
+.ant-modal-footer{
+    border: none;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.ant-select-disabled {
+    opacity: 0.5;
+}

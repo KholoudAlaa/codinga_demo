@@ -1,0 +1,7 @@
+export const SET_LOCALE = 'SET_LOCALE'
+export const UPDATE_CONNECTION_STATUS = 'UPDATE_CONNECTION_STATUS'
+
+export default {
+    SET_LOCALE,
+    UPDATE_CONNECTION_STATUS
+}

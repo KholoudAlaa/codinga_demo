@@ -1,0 +1,16 @@
+
+
+@include mq("ipad") {
+   body,
+   html{
+       font-size: 15px !important;
+   }
+}
+
+@include mq("tablet") {
+    body,
+    html{
+        font-size: 14px !important;
+    }
+ }
+ 

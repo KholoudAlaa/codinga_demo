@@ -1,0 +1,24 @@
+/******************links***************/
+/*primary_link*/
+.primary_link {
+    @include link($primary_color);
+    &:hover{
+        color: $dark_blue;
+    }
+}
+
+/*secondary_link*/
+.secondary_link {
+    @include link($secondary_color);
+    &:hover{
+        color: $dark_red;
+    }
+}
+/*Grayscale_link*/
+.Grayscale_link {
+    @include link($Nero);
+    &:hover{
+        color: $black;
+    }
+}
+

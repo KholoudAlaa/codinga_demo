@@ -1,0 +1,285 @@
+header{
+    &.user-header{
+        @extend  %flexBetween;
+        position: sticky;
+        top: 0;
+        z-index: 55;
+        border-bottom: 1px solid #e3e3e3;
+        background-color: #f5f5f5;
+        min-height: 60px;
+        padding-left: 35px;
+        padding-right: calc(14px + 20px); // 20px is the width of after in .profile-holder
+        body.rtl &{
+            padding-left: calc(14px + 20px);;
+            padding-right: 35px;
+        }
+        p{
+            font-size: 0.8125rem;
+            font-weight: bold;
+            letter-spacing: 1.3px;
+            color: $primary_color;
+        }
+        .ant-input-search{
+            width: 275px;
+            .ant-input{
+                padding: 0 15px !important;
+            }
+            .ant-input-suffix{
+                right: 15px;
+                top: 35%;
+                body.rtl &{
+                    right: auto;
+                    left: 15px;
+                }
+            }
+            @include mq("tablet") {
+                width: 150px;
+             }
+             
+        }
+        .notify-holder{
+            margin: 0 20px;
+            cursor: pointer;
+            position: relative;
+            .notify-count{
+                @extend  %flexCenter;
+                box-sizing: content-box;
+                position: absolute;
+                top: -6px;
+                right: -6px;
+                width: 15px;
+                height: 15px;
+                border-radius: 12px;
+                border: solid 1.5px #f5f5f5;
+                background-color: #d83025;
+                font-size: 10px;
+                font-weight: bold;
+                color: #ffffff;
+                body.rtl &{
+                    left: -6px;
+                    right: auto;
+                }
+            }
+        }
+        .profile-holder{
+            @extend  %flexCenter;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 6px solid #e5e5e5;
+            box-sizing: content-box;
+            cursor: pointer;
+            &::after{
+                content: "\2193";
+                @extend  %flexCenter;
+                font-size: 10px;
+                font-weight: 400;
+                width: 20px;
+                height: 17px;
+                border-radius: 0 50% 50% 0;
+                background-color: #e5e5e5;
+                position: absolute;
+                top: 50%;
+                right: -20px;
+                transform: translateY(-50%);
+                body.rtl &{
+                    right: auto;
+                    left: -20px;
+                    border-radius: 50% 0 0 50%;
+                }
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+        .lang-btn{
+            font-size: 16px;
+            color: $dark_blue;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+        .ant-divider{
+            height: 35px;
+            margin: 0;
+        }
+    }
+
+    // start header of grid
+    &.grid-action-header{
+        height: 44px;
+        @extend %flexBetween;
+        background-color: #f5f5f5;
+        padding-left : 26px;
+        padding-right : 14px;
+        body.rtl &{
+            padding-right : 26px;
+            padding-left : 14px;
+        }
+        .action-btns{
+            margin-left: 20px;
+            &>span{
+                display: inline-flex;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-right: 20px;
+                width: 18px;
+                height: 18px;
+                cursor: pointer;
+                &:last-of-type{
+                    margin-right: 0;
+                    body.rtl &{
+                        margin-left: 0;
+                    }
+                }
+                &.duplicate-btn{
+                    background-image: url(../../assets/duplicate-icon.svg);
+                    &[disabled]{
+                        background-image: url(../../assets/duplicate-icon-active.svg);
+                    }
+                }
+                &.delete-btn{
+                    background-image: url(../../assets/delete-icon.svg);
+                    &[disabled]{
+                        background-image: url(../../assets/delete-icon-active.svg);
+                    }
+                }
+                &.archive-btn{
+                    background-image: url(../../assets/archive-icon.svg);
+                    &[disabled]{
+                        background-image: url(../../assets/archive-icon-active.svg);
+                    }
+                }
+                &.edit-btn{
+                    background-image: url(../../assets/edit-icon.svg);
+                    &[disabled]{
+                        background-image: url(../../assets/edit-icon-active.svg);
+                    }
+                }
+                body.rtl &{
+                    margin-left: 0px;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+// dropdown style in header
+.user-menu-wrapper{
+    padding: 0;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px #d6d6d6;
+    min-width: 170px;
+    &>li{
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        a{
+            margin: 0;
+            padding: 0;
+            font-size: 13px;
+            font-weight: bold;
+            color: #565656;
+        }
+        &:first-of-type{
+            padding: 16px 14px 12px 14px;
+            h6{
+                font-size: 15px;
+                font-weight: bold;
+                color: $primary_color;
+            }
+            span{
+                font-size: 9px;
+                font-weight: bold;
+                color: #565656;
+                letter-spacing: 0.18px;
+            }
+        }
+        &:hover{
+            background-color: $userbackground;
+        }
+
+    }
+}
+.notify-menu-wrapper{
+    padding: 0;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px #d6d6d6;
+    header{
+        font-size: 15px;
+        font-weight: bold;
+        padding: 10px 18px;
+        color: #ffffff;
+        background-color: $primary_color;
+    }
+
+    &>li:not(:last-of-type){
+        min-height: 85px;
+        display: flex;
+        align-items: center;
+        padding: 12px 12px 12px 30px;
+        background-color: $notifybackground !important;
+        border-bottom: 1px solid #d6d6d6;
+        a{
+            padding: 0;
+            margin: 0;
+            position: relative;
+            h6{
+                font-size: 14px;
+                font-weight: bold;
+                color: #242424;
+            }
+            span{
+                font-size: 10px;
+                font-weight: bold;
+                color: #565656;
+            }
+            &::before{
+                content: '';
+                width: 10px;
+                height: 10px;
+                background-color: $primary_color;
+                border-radius: 50%;
+                position: absolute;
+                left: -20px;
+                body.rtl &{
+                    left: auto;
+                    right: -20px;
+                }
+            }
+        }
+        &.seen{
+            background-color: #ffffff !important;
+            a{
+                &::before{
+                    display: none;
+                }
+            }
+        }
+        body.rtl &{
+            padding: 12px 30px 12px 12px;
+        }
+    }
+
+    &>li{
+        &:last-of-type{
+            min-height: 40px;
+            @extend  %flexCenter;
+            a{
+                padding: 0;
+                margin: 0;
+                span{
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #565656;
+                }
+            }
+            &:hover{
+                background-color: transparent;
+            }
+        }
+    }
+}

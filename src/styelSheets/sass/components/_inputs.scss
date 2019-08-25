@@ -1,0 +1,507 @@
+// start radio btn style
+
+.ant-radio-group-outline {
+    .ant-radio-wrapper {
+        color: $Nero;
+        font-size: 15px;
+        font-weight: bold;
+
+        .ant-radio-inner {
+            width: 18px;
+            height: 18px;
+            border-width: 2px;
+            border-color: $grey;
+            color: $grey;
+            box-shadow: none !important;
+
+            &:after {
+                background-color: $primary_color;
+            }
+        }
+
+        &.ant-radio-wrapper-checked {
+            .ant-radio-inner {
+                border-color: $primary_color;
+            }
+
+            .ant-radio-checked {
+                &+span {
+                    color: $primary_color;
+                }
+            }
+        }
+
+        &:hover {
+            color: $primary_color;
+
+            .ant-radio-inner {
+                border-color: $primary_color;
+
+                &:after {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+        }
+
+        &.ant-radio-wrapper-disabled {
+
+            // style on radiobtn disabled
+            .ant-radio-inner {
+                background-color: $white;
+            }
+
+            &:hover {
+                .ant-radio-inner {
+                    &:after {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// start Checkbox btn style
+
+.ant-checkbox-wrapper {
+    color: $Nero;
+    font-size: 15px;
+    font-weight: bold;
+
+    .ant-checkbox-inner {
+        width: 18px;
+        height: 18px;
+        border-width: 2px;
+        border-color: $grey;
+        box-shadow: none !important;
+
+        &.ant-checkbox-wrapper-checked {
+            .ant-checkbox-inner {
+                border-color: $primary_color;
+            }
+        }
+    }
+
+    &.ant-checkbox-wrapper-checked {
+        .ant-checkbox-inner {
+            background-color: $primary_color;
+            border-color: $primary_color;
+        }
+    }
+
+    &:hover {
+        .ant-checkbox-inner {
+            border-color: $primary_color;
+        }
+
+        .ant-checkbox {
+            &+span {
+                color: $primary_color;
+            }
+        }
+
+    }
+
+    &.ant-checkbox-wrapper-disabled {
+
+        // style on radiobtn disabled
+        .ant-checkbox-inner {
+            background-color: $white;
+        }
+
+        &:hover {
+            .ant-checkbox+span {
+                color: rgba(0, 0, 0, 0.25);
+            }
+
+            .ant-radio-inner {
+                &:after {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+.ant-checkbox-indeterminate .ant-checkbox-inner::after {
+    background-color: $primary_color;
+}
+
+// start style for switch input
+.ant-switch {
+    min-width: 50px !important;
+    height: 16px !important;
+    margin-left: 5px !important;
+    background-color: $WhiteSmoke;
+
+    &::after {
+        width: 25px;
+        height: 25px;
+        top: -6px;
+        margin-left: -5px;
+        box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.16);
+        background-color: $Snow;
+    }
+
+    &.ant-switch-checked {
+        background-color: $light_blue;
+
+        &::after {
+            margin-left: 5px;
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.16);
+            background-color: $primary_color;
+        }
+    }
+}
+
+.switch-input-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    span {
+        font-size: 14px;
+        font-weight: bold;
+        color: #5a5a5a;
+    }
+
+    .ant-form-item {
+        display: flex;
+        align-items: center;
+
+        .ant-form-item-label {
+            position: static;
+
+            label {
+                margin-right: 15px;
+                font-size: 14px;
+                body.rtl &{
+                    margin-left: 15px;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+// start style for counter 
+
+.counter-input-holder {
+    display: flex;
+    flex-direction: column;
+
+    .counter-header {
+        font-size: 14px;
+        font-weight: bold;
+        color: #5a5a5a;
+        margin-bottom: 5px;
+    }
+
+    .ant-form-item {
+        display: flex !important;
+
+        .ant-input-number {
+            min-height: 55px;
+            min-width: 100px;
+        }
+    }
+
+    .ant-input-number-input {
+        height: 100%;
+        padding-top: 18px;
+        text-align: left;
+
+        body.rtl & {
+            text-align: right;
+        }
+    }
+
+    .ant-input-number-input-wrap {
+        height: 100%;
+        font-size: 16px;
+        color: #242424;
+    }
+
+    .ant-input-number-handler-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: 30px;
+        padding-bottom: 8px;
+        top: auto;
+        bottom: 0;
+        right: 0;
+        border: 0;
+        opacity: 1 !important;
+
+        body.rtl & {
+            left: 0;
+            right: auto;
+        }
+
+        span {
+            position: relative;
+            height: 16px !important;
+            width: 16px;
+            font-size: 16px;
+            border: 0;
+            margin-right: 8px !important;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #dadce0;
+            border-radius: 2px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &.ant-input-number-handler-up {
+                &::after {
+                    content: "\002B"
+                }
+            }
+
+            &.ant-input-number-handler-down {
+                &::after {
+                    content: "\2212"
+                }
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+
+                body.rtl & {
+                    margin-right: 20px;
+                    margin-left: 0;
+                }
+            }
+
+            i {
+                display: none !important;
+            }
+        }
+    }
+}
+
+.ant-input {
+    // style for input in global
+    height: 44px;
+    border: solid 1px #dadce0;
+    border-radius: 4px;
+    background-color:transparent;
+    padding: 0px 22px !important;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #242424;
+
+    @include input-placeholder {
+        font-size: 0.75rem;
+        color: #4b4b4b;
+        font-weight: 500;
+        text-transform: capitalize;
+    }  
+}
+
+.ant-input-prefix {
+    display: none; // icon in input 
+}
+
+.ant-form-item {
+    position: relative;
+    outline: none;
+
+    .ant-form-item-label {
+        label {
+            font-size: 11px;
+            font-weight: bold;
+            color: #5a5a5a;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+
+        body.rtl & {
+            left: auto;
+            right: 12px;
+        }
+    }
+
+    .ant-form-item-control {
+        outline: none;
+    }
+}
+
+.ant-input-affix-wrapper,
+.ant-form-item-control-wrapper {
+    outline: none;
+}
+
+.ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
+    border-right-width: 1px !important;
+}
+
+.ant-input[disabled] {
+    background-color: #f2f2f2;
+}
+
+
+// start select box style
+.ant-select {
+    .ant-select-selection {
+        height: 44px;
+        border: solid 1px #dadce0;
+        border-radius: 4px;
+        background-color: transparent;
+        padding: 10px 12px !important;
+        padding-top: 15px !important;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: #242424;
+        box-shadow: none;
+
+        .ant-select-selection__placeholder {
+            // palcholder style
+            font-size: 0.75rem;
+            color: #4b4b4b;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+
+        &.ant-select-open {
+            .ant-select-selection {}
+        }
+    }
+}
+
+// start search input style
+.ant-input-search {
+    height: 35px;
+
+    .ant-input {
+        height: 35px;
+        padding-top: 10px !important;
+        background-color: rgba(255, 255, 255, 0.47);
+
+        @include input-placeholder {
+            font-size: 14px;
+            color: #949494;
+            text-transform: capitalize;
+        }
+    }
+
+    .ant-input-suffix {
+        i {
+            font-size: 18px;
+            color: $primary_color;
+        }
+    }
+}
+
+// start dropdown search 
+.ant-select-dropdown {
+    .ant-select-dropdown-menu {
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #f0f0f0;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #747474;
+            border-radius: 5px;
+        }
+    }
+}
+
+// start tooltip style
+.ant-tooltip {
+    .ant-tooltip-inner {
+        @extend %flexCenter;
+        min-height: 23px;
+        font-size: 10px;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #000000d9;
+    }
+}
+
+// start pagination style
+.ant-pagination {
+    li {
+        &:hover {
+            border-color: $primary_color;
+
+            a {
+                color: $primary_color !important;
+                border-color: $primary_color !important;
+            }
+        }
+    }
+
+    .ant-pagination-item-active {
+        border-color: $primary_color;
+
+        a {
+            color: $primary_color;
+        }
+    }
+}
+
+//validation
+.has-error .ant-form-explain, .has-error .ant-form-split {
+ font-size: 12px;
+ margin-top: 5px;
+ position: absolute;
+ bottom: -22px;
+ left: 22px;
+
+ body.rtl &{
+    left: auto;
+    right: 22px;
+ }
+}
+.ant-select-selection__placeholder {
+    margin-top: -10px;
+    text-transform: capitalize;
+}
+.ant-select-selection-selected-value {
+    margin-top: 0px;
+}
+.ant-select-selection__rendered{
+ margin-top: -8px;
+}
+
+.ant-select-dropdown-menu-item{
+    font-size: 0.75rem;
+}
+form textarea.ant-input {
+    padding-top: 12px !important;
+}
+
+textarea {
+    resize: none;
+}
+
+.relative_holder{
+    width: 47.5% !important;
+
+    @include mq("phone-wide"){
+        width: 100% !important;
+    }
+
+    .ant-form-item {
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,100 @@
+
+
+// classses for size
+.pb-24{
+    padding-bottom: 1.5rem !important;
+}
+.pt-24{
+    padding-top: 1.5rem !important;
+}
+.py-24{
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+.px-50{
+    padding-left: 3.125rem !important;
+    padding-right: 3.125rem !important;
+}
+.mb-0{
+    margin-bottom: 0 !important;
+}
+// classes for display
+.d-flex{
+    display: flex;
+}
+.align-items-center{
+    align-items: center;
+}
+
+
+
+.pl-20{
+    padding-left: 1.25rem !important;
+    body.k-rtl &{
+        padding-left: 0 !important;
+        padding-right: 1.25rem !important;
+    }
+}
+.h-90{
+    height: 90%;
+}
+.ml-20{
+    margin-left: 1.25rem !important;
+
+    body.k-rtl &{
+        margin-left: 0 !important;
+        margin-right: 1.25rem !important;
+    }
+}
+
+.text-underline{
+    text-decoration: underline !important;
+}
+
+.text-underline-none{
+    text-decoration: none !important;
+}
+
+.p-relative{
+    position: relative !important;
+}
+.cursor-p{
+    cursor: pointer;
+}
+
+.h-auto{
+    height: auto !important; 
+}
+
+.text-nowrap{
+    white-space: nowrap;
+}
+.sticky-bottom{
+    position: sticky;
+    bottom: 0; 
+    z-index: 1020;
+}
+.w-100{
+    width: 100% !important;
+}
+.text-right{
+    text-align: right !important;
+    body.rtl &{
+        text-align: left !important;
+    }
+}
+.text-left{
+    text-align: left !important;
+    body.rtl &{
+        text-align: right !important;
+    }
+}
+// shared classes
+
+.fit-cover{
+    object-fit: cover;
+}
+
+.visibility-hidden{
+    visibility: hidden !important;
+}

@@ -1,0 +1,72 @@
+
+/***********************headeings*********************/
+h1,h2,h3,h4,h5,h6{
+    color: $Nero; 
+    line-height: normal;
+}
+h1 {
+    font-size: 2.1875rem; //35px
+}
+h2{
+    font-size: 1.875rem; //30px
+}
+h3{
+    font-size: 1.5625rem; //25px
+}
+
+h4{
+    font-size: 1.25rem; //20px
+}
+
+h5{
+    font-size: 1.125rem; //18px
+}
+h6{
+    font-size: 1rem; //16px
+}
+p{
+    font-size: 0.875rem; 
+    font-weight:normal;
+}
+
+/*************TEXT******************/
+
+.black_text {
+    color: $black//
+}
+
+.white_text {
+    color: $white !important;
+}
+
+.primary_text {
+    color: $primary_color;
+}
+
+.secondary_text {
+    color: $secondary_color;
+}
+.dark-blue-text{
+    color: $dark_blue;
+}
+
+/*disabled link*/
+.isdisabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
+}
+
+/*backgrounds*/
+.bg_white {
+    background-color: $white;
+}
+
+.bg_primary {
+    background-color: $primary_color;
+}
+
+.bg_secondary {
+    background-color: $secondary_color;
+}
+

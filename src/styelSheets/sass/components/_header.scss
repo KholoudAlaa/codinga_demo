@@ -1,0 +1,65 @@
+.header{
+  background-image: linear-gradient(to bottom, #312782 8%, #1f114c);
+  padding: 10px 5%;
+
+  .lang-holder{
+    .secondary_fill{
+      margin: 0 15px 0 0;
+      body.rtl &{
+        margin: 0 0 0 15px;
+      }
+        .login-form-forgot{
+            color: $white
+        }   
+    }
+
+    .white_fill{
+      .login-form-forgot{
+          color: $secondary_color
+      }   
+    }
+     
+} 
+
+  @include mq("tablet") {
+    padding: 10px 2%;
+  }
+
+  img{
+    margin-right: 80px;
+    max-height: 40px;
+    @include mq("tablet") {
+      margin-right: 30px;
+    }
+
+    body.rtl &{
+        margin-left: 100px;
+        margin-right: 0px
+    }
+  }
+  &>div:first-of-type{
+      a{
+          color: $white;
+          body.rtl &{
+            padding-right: 0px; 
+          }
+      }
+  }
+  .lang_style{
+      background-color: $white;
+      margin-right: 20px;
+      body.rtl &{
+        margin-right: 0px;
+        margin-left: 20px;
+      }
+  }
+
+}
+.top_fixed{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background-image: linear-gradient(to bottom, #312782 8%, #1f114c);
+}
