@@ -45,7 +45,9 @@ export function login(payload,onSuccess, onError){
 export function register(payload, onSuccess, onError){
     return dispatch => {
         postResource('/api/signup', JSON.stringify(payload), (res) => {
-            dispatch(authActions.authLogin(res.token))
+            dispatch(authActions.authLogin({
+                accessToken: res.token,
+            }))
             onSuccess(res)
         }, (err) => {
             onError(err)

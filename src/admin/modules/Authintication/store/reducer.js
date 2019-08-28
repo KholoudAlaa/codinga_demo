@@ -45,7 +45,7 @@ const reducer = (state = initialState, {type, payload = null}) => {
 function login(state, payload) {
         localStorage.setItem('access_token', payload.accessToken);
     return {
-      ...state, isAuthenticated: true, token: payload.token
+      ...state, isAuthenticated: true, token: payload.accessToken
     }
 }
 
